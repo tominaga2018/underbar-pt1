@@ -12,5 +12,10 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns true if empty array', () => {
+      const nums = [];
+      expect(_.every(nums, num => num % 2 === 1)).toBe(true);
+    });
+
   });
 });

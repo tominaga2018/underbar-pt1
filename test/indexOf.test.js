@@ -26,4 +26,13 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns the first matching index', () => {
+    const arr = ['foo', 'bar', 'baz', 'bar', 'bar'];
+    expect(_.indexOf(arr, 'bar', 1)).toBe(1);
+  });
+
+  it('returns the first matching index', () => {
+    const arr = ['foo', 'bar', 'baz', 'bar', 'bar'];
+    expect(_.indexOf(arr, 'bar', 0)).toBe(1);
+  });
 });

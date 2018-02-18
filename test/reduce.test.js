@@ -13,4 +13,10 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  it('initial value is not 0', () => {
+    const nums = [1, 2, 3, 4, 5];
+    const result = _.reduce(nums, (acc, num) => acc + num, 5);
+    expect(result).toEqual(20);
+  });
+
 });

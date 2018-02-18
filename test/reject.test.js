@@ -18,4 +18,9 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  it('no result', () => {
+    const nums = [5, 7, 11];
+    expect(_.reject(nums, num => num % 2 === 1)).toEqual([]);
+  });
 });

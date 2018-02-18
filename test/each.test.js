@@ -39,5 +39,20 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('element is more than length', () => {
+    const arrayLikeObj = {
+      length: 2,
+      1: 'a',
+      2: 'b',
+      3: 'c'
+    };
+    let count = 0;
+    _.each(arrayLikeObj, function(element, index, iteratedArrayLikeObj) {
+      expect(element).toEqual(iteratedArrayLikeObj[index]);
+      count += 1;
+    });
+    expect(count).toBe(2);
+  });
 });
 
